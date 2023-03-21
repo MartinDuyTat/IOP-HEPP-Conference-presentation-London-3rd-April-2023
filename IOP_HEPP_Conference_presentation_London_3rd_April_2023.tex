@@ -59,7 +59,7 @@
 \usepackage{overpic}
 
 % Here's where the presentation starts, with the info for the title slide
-\title[$B^\pm\to{[K^+K^-\pi^+\pi^-]}_Dh^\pm$]{Model independent measurement of the CKM angle \texorpdfstring{$\gamma$}{gamma} with \texorpdfstring{$B^\pm\to[K^+K^-\pi^+\pi^-]_Dh^\pm$}{B2DhD2KKpipi} at LHCb and BESIII}
+\title[$B^\pm\to{[K^+K^-\pi^+\pi^-]}_DK^\pm$]{Model independent measurement of the CKM angle \texorpdfstring{$\gamma$}{gamma} with \texorpdfstring{$B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}{B2DhD2KKpipi} at LHCb and BESIII}
 
 \author{Martin Tat}
 \institute[University of Oxford]{\normalsize University of Oxford\\ \vspace{0.3cm}\normalsize IOP Joint APP and HEPP Conference}
@@ -191,7 +191,7 @@
 \begin{frame}[fragile]{Sensitivity through interference}
   \begin{center}
     Phase space integrated analysis: Compare yields of $B^+$ and $B^-$\\~\\
-    Interference depends on $\gamma$, but it is diluted by $\kappa$ when integrated over phase space
+    Interference depends on $\gamma$, diluted by $\kappa$ when integrated over phase space
   \end{center}
   \begin{equation*}
     \begin{tikzcd}[column sep=huge]
@@ -208,19 +208,10 @@
 \begin{frame}{First look at $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
   \begin{figure}
     \centering
-    \includegraphics[width = 1.0\textwidth]{Plots/d2kkpipi_fiveL_allDP_GLW.pdf}
+    \includegraphics[width = 1.0\textwidth,trim={0 7cm 0 0},clip=true]{Plots/d2kkpipi_fiveL_allDP_GLW.pdf}
     \caption*{\tiny arXiv:2301.10328}
   \end{figure}
   \vspace{-0.5cm}
-  \begin{center}
-    \Large Clear asymmetry due to $C\!P$ violation
-  \end{center}
-\end{frame}
-
-\begin{frame}{First look at $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
-  \begin{equation*}
-    \mathcal{A} = \frac{2r_B\kappa\sin(\delta_B)\sin(\gamma)}{1 + r_B^2 + 2r_B\kappa\cos(\delta_B)\cos(\gamma)}
-  \end{equation*}
   \begin{center}
     {\large Measuring the $B^\pm\to DK^\pm$ asymmetry $\mathcal{A}$ provide useful constraints on $\gamma$, but with some caveats:}
   \end{center}
@@ -229,15 +220,14 @@
     \begin{itemize}
       \item{Phys. Rev. D \textbf{107}, 032009}
     \end{itemize}
-    \item{Second order sensitivity to $\cos(\gamma)$}
-    \item{Four-fold symmetry:}
+    \item{Four-fold degeneracy:}
     \begin{itemize}
       \item{$(\gamma, \delta_B)\to(\delta_B, \gamma)$}
       \item{$(\gamma, \delta_B)\to(\pi - \gamma, \pi - \delta_B)$}
     \end{itemize}
   \end{enumerate}
   \begin{center}
-    \Large Solution: Perform analysis in local regions of phase space!
+    \large Solution: Perform analysis in local regions of phase space!
   \end{center}
 \end{frame}
 
@@ -250,23 +240,24 @@
 
 \begin{frame}{Phase space binned analysis of $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
   \begin{center}
-    \Large First study of $C\!P$ violation in $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$\\~\\
+    \Large Our aim: First binned model independent measurement of $\gamma$ in $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$
   \end{center}
   \begin{itemize}
     \setlength\itemsep{1.0em}
-    \item{Proposed by J. Rademacker and G. Wilkinson}
+    \item{Model dependent measurement first proposed in 2007}
     \begin{itemize}
-      \item{Phys. Lett. \textbf{B647} (2007) 400}
-      \item{FOCUS amplitude model predicts a $14^\circ$ precision with $1000$ candidates}
+      \item{Phys. Lett. \textbf{B647} (2007) 400 by J. Rademacker and G. Wilkinson}
+      \item{FOCUS amplitude model: $14^\circ$ precision with $1000$ candidates}
     \end{itemize}
     \item{State of the art amplitude analysis by LHCb:}
     \begin{itemize}
       \item{JHEP \textbf{02} (2019) 126}
       \item{Exploits the huge dataset of charm decays collected by LHCb}
+      \item{Useful for understanding the 5-dimensional phase space}
     \end{itemize}
-    \item{Large interference effects in local regions of the 5D phase space}
+    \item{Use LHCb model to identify regions with large asymmetries}
     \begin{itemize}
-      \item{Identify regions with similar asymmetries and split into bins}
+      \item{Place regions with similar asymmetries together in bins}
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -286,22 +277,11 @@
       \caption*{$K_S^0K^+K^-$}
     \end{subfigure}
   \end{figure}
-\end{frame}
-
-\begin{frame}{Binned analysis of the $D\to K^+K^-\pi^+\pi^-$ mode}
-  \begin{figure}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/KSpipi_Minus_Dalitz.png}
-      \caption*{$B^-\to[K_S^0\pi^+\pi^-]_DK^-$}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/KSpipi_Plus_Dalitz.png}
-      \caption*{$B^+\to[K_S^0\pi^+\pi^-]_DK^+$}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    \Large Can you find the asymmetries?
-  \end{center}
+  \begin{itemize}
+    \setlength\itemsep{0.5em}
+    \item{The strong phase $\delta_D$ varies across phase space, leading to different asymmetries in each bin}
+    \item{The amplitude-averaged cosine and sine of $\delta_D$, $c_i$ and $s_i$, are measured directly in each bin at charm factories}
+  \end{itemize}
 \end{frame}
 
 \section{Binning scheme}
@@ -356,23 +336,8 @@
 
 \begin{frame}{Mass fits, $C\!P$ fit and $\gamma$}
   \begin{center}
-    \large In the end, this analysis is a counting experiment
+    \Large Global invariant mass fit: Fit everything to understand mass shapes and background yields
   \end{center}
-  Counting strategy:
-  \begin{enumerate}
-    \setlength\itemsep{1.0em}
-    \item{Perform a ``global fit'' of all $B^\pm$ candidates}
-    \item{Fix all shape parameters}
-    \item{Sort $B^\pm$ candidates by charge and bins}
-    \item{Perform a ``$C\!P$ fit'' simultaneously, but only let bin yields float}
-    \item{From the $64$ bin yields, determine $\gamma$ using model-predicted values of $c_i$ and $s_i$}
-    \begin{itemize}
-      \item{In the future, model-independent measurements of $c_i$ and $s_i$ will become available}
-    \end{itemize}
-  \end{enumerate}
-\end{frame}
-
-\begin{frame}{Mass fits, $C\!P$ fit and $\gamma$}
   \begin{figure}
     \centering
     \includegraphics[width = 1.0\textwidth]{Plots/d2kkpipi_fiveL_allDP.pdf}
@@ -389,7 +354,7 @@
 
 \begin{frame}{Interpretation of $\gamma$}
   \begin{center}
-    \Large We can interpret our $C\!P$ observables in terms of the physics parameters $\gamma$, $r_B^{DK}$, $\delta_B^{DK}$, $r_B^{D\pi}$, $\delta_B^{D\pi}$
+    \Large CP fit: Simultaneously fit bin yields and determine physics parameters, using model predictions of $c_i$ and $s_i$:
   \end{center}
   \begin{align*}
     \gamma &= (116^{+12}_{-14})^\circ, \\
@@ -405,30 +370,19 @@
     \gamma = (63.8^{+3.5}_{-3.7})^\circ
   \end{equation*}
   \begin{center}
-    \large What went wrong?!
+    \large What went wrong?!\\
+    Do we trust the model predicted $c_i$ and $s_i$, or their uncertainties?
   \end{center}  
 \end{frame}
 
 \begin{frame}{Interpretation of $\gamma$}
-  \begin{figure}
-    \centering
-    \begin{overpic}[percent,scale=0.23]{Plots/SpongebobMemeTemplate.png}
-      \put(7.5,75){\tiny$\gamma = (116^{+12}_{-14})^\circ$}
-    \end{overpic}
-  \end{figure}
-  \begin{center}
-    Do we trust the model predicted $c_i$ and $s_i$, or their uncertainties?
-  \end{center}
-\end{frame}
-
-\begin{frame}{The $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$ decay mode}
   \begin{center}
     {\Large There are several reasons why amplitude models \underline{cannot} be trusted}
   \end{center}
   \begin{enumerate}
     \setlength\itemsep{1.0em}
     \item{Amplitude models are just models, which may not reflect reality}
-    \item{In fact, the model is fitted to data that knows nothing about $\delta_D(\Phi)$}
+    \item{In fact, the model is fitted to data that knows nothing about $\delta_D$}
     \item{It is \underline{impossible} to assign an objective error to a model!}
   \end{enumerate}
   \vspace{0.5cm}
@@ -593,7 +547,7 @@
 \begin{frame}{Summary and conclusion}
   \begin{enumerate}
     \setlength\itemsep{1.0em}
-    \item{I have presented the first model-independent measurement of $\gamma$ using $B^\pm\to[K^+K^-\pi^+\pi^-]_Dh^\pm$}
+    \item{I have presented the first model-independent measurement of $\gamma$ using $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
     \item{The optimised binning scheme, developed with an amplitude model, successfully identified regions with large, local $C\!P$ asymmetries}
   \end{enumerate}
   \begin{columns}[onlytextwidth]
@@ -603,7 +557,7 @@
         \setcounter{enumi}{2}
         \setlength\itemsep{1.0em}
         \item{However, amplitude model predictions of $\delta_D$ \underline{should not be trusted}}
-        \item{$3\sigma$ tension with world average}
+        \item{LHCb analysis has $3\sigma$ tension with world average}
       \end{enumerate}
     \end{column}
     \begin{column}{0.5\textwidth}
@@ -622,7 +576,7 @@
   \begin{enumerate}
     \setlength\itemsep{1.0em}
     \setcounter{enumi}{4}
-    \item{External inputs from charm factories, such as BESIII, are crucial to constrain charm strong phases}
+    \item{External inputs from charm factories, such as BESIII, are crucial to eliminate biases due to modelling}
   \end{enumerate}
 \end{frame}
 
