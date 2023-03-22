@@ -59,7 +59,7 @@
 \usepackage{overpic}
 
 % Here's where the presentation starts, with the info for the title slide
-\title[$B^\pm\to{[K^+K^-\pi^+\pi^-]}_DK^\pm$]{Model independent measurement of the CKM angle \texorpdfstring{$\gamma$}{gamma} with \texorpdfstring{$B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}{B2DhD2KKpipi} at LHCb and BESIII}
+\title[$B^\pm\to{[K^+K^-\pi^+\pi^-]}_DK^\pm$]{Model-independent measurement of the CKM angle \texorpdfstring{$\gamma$}{gamma} with \texorpdfstring{$B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}{B2DhD2KKpipi} at LHCb and BESIII}
 
 \author{Martin Tat}
 \institute[University of Oxford]{\normalsize University of Oxford\\ \vspace{0.3cm}\normalsize IOP Joint APP and HEPP Conference}
@@ -175,6 +175,9 @@
   \vspace{-0.3cm}
   \begin{itemize}
     \item{Superposition of $D^0$ and $\bar{D^0}$}
+    \begin{itemize}
+      \item{Consider $D^0$/$\bar{D^0}$ decays to the same final state, such as $D\to K^+K^-$}
+    \end{itemize}
     \item{$b\to u\bar{c}s$ and $b\to c\bar{u}s$ interference $\to$ Sensitivity to $\gamma$}
   \end{itemize}
   \vspace{-0.3cm}
@@ -190,9 +193,14 @@
 
 \begin{frame}[fragile]{Sensitivity through interference}
   \begin{center}
-    Phase space integrated analysis: Compare yields of $B^+$ and $B^-$\\~\\
-    Interference depends on $\gamma$, diluted by $\kappa$ when integrated over phase space
+    This talk: Focus on multi-body $D$ decays, where interference effects vary across phase space
   \end{center}
+  \begin{itemize}
+    \setlength\itemsep{0.5em}
+    \item{First, consider a phase-space integrated analysis}
+    \item{Compare yields of $B^+$ and $B^-$ and determine the asymmetry}
+    \item{Interference effects are diluted by $\kappa$ when integrated over phase space}
+  \end{itemize}
   \begin{equation*}
     \begin{tikzcd}[column sep=huge]
       & D^0K^- \arrow[dr, bend left = 25, "\mathcal{A}_{D^0}"] & \\
@@ -200,6 +208,7 @@
       & \bar{D^0}K^- \arrow[ur, bend right = 25, "\mathcal{A}_{\bar{D^0}}"'] & \\
     \end{tikzcd}
   \end{equation*}
+  \vspace{-0.7cm}
   \begin{equation*}
     \lvert\mathcal{A}(B^-)\lvert^2\propto1 + r_B^2 + 2r_B\kappa\cos(\delta_B - \gamma)
   \end{equation*}
@@ -218,7 +227,7 @@
   \begin{enumerate}
     \item{Interference effects are diluted by a factor $\kappa = \SI{0.46(8)}{}$}
     \begin{itemize}
-      \item{Phys. Rev. D \textbf{107}, 032009}
+      \item{\href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.032009}{Phys. Rev. D \textbf{107}, 032009}}
     \end{itemize}
     \item{Four-fold degeneracy:}
     \begin{itemize}
@@ -231,14 +240,14 @@
   \end{center}
 \end{frame}
 
-\section{Phase space binned analysis of \texorpdfstring{$B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}{B2DKD2KKpipi}}
-\begin{frame}{Phase space binned analysis of $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
+\section{Phase-space binned analysis of \texorpdfstring{$B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}{B2DKD2KKpipi}}
+\begin{frame}{Phase-space binned analysis of $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
   \begin{center}
-    {\huge Phase space binned analysis of $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
+    {\huge Phase-space binned analysis of $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
   \end{center}
 \end{frame}
 
-\begin{frame}{Phase space binned analysis of $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
+\begin{frame}{Phase-space binned analysis of $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
   \begin{center}
     \Large Our aim: First binned model independent measurement of $\gamma$ in $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$
   \end{center}
@@ -246,23 +255,23 @@
     \setlength\itemsep{1.0em}
     \item{Model dependent measurement first proposed in 2007}
     \begin{itemize}
-      \item{Phys. Lett. \textbf{B647} (2007) 400 by J. Rademacker and G. Wilkinson}
+      \item{\href{https://www.sciencedirect.com/science/article/pii/S0370269307002262}{Phys. Lett. \textbf{B647} (2007) 400} by J. Rademacker and G. Wilkinson}
       \item{FOCUS amplitude model: $14^\circ$ precision with $1000$ candidates}
     \end{itemize}
     \item{State of the art amplitude analysis by LHCb:}
     \begin{itemize}
-      \item{JHEP \textbf{02} (2019) 126}
+      \item{\href{https://link.springer.com/article/10.1007/jhep02(2019)126}{JHEP \textbf{02} (2019) 126}}
       \item{Exploits the huge dataset of charm decays collected by LHCb}
       \item{Useful for understanding the 5-dimensional phase space}
     \end{itemize}
-    \item{Use LHCb model to identify regions with large asymmetries}
+    \item{Use LHCb model to identify regions with expected large asymmetries}
     \begin{itemize}
       \item{Place regions with similar asymmetries together in bins}
     \end{itemize}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Phase space binned analysis of $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
+\begin{frame}{Phase-space binned analysis of $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
   \begin{itemize}
     \setlength\itemsep{1.0em}
     \item{Analogous to the decays $D^0\to K_S^0\pi^+\pi^-$ and $K_S^0K^+K^-$, where the binning scheme may be visualised on a Dalitz plot}
@@ -280,7 +289,7 @@
   \begin{itemize}
     \setlength\itemsep{0.5em}
     \item{The strong phase $\delta_D$ varies across phase space, leading to different asymmetries in each bin}
-    \item{The amplitude-averaged cosine and sine of $\delta_D$, $c_i$ and $s_i$, are measured directly in each bin at charm factories}
+    \item{The amplitude-averaged cosine and sine of $\delta_D$, $c_i$ and $s_i$, are measured directly in bin $i$ at charm factories, such as BESIII}
   \end{itemize}
 \end{frame}
 
@@ -352,6 +361,18 @@
   \end{align*}
 \end{frame}
 
+\begin{frame}{Mass fits/ $C\!P$ fit and $\gamma$}
+  \begin{figure}
+    \includegraphics[height = 5cm]{Plots/BinAsymmetries_dk.pdf}
+  \end{figure}
+  \vspace{-0.3cm}
+  \begin{itemize}
+    \setlength\itemsep{0.5em}
+    \item{Clear bin asymmetries are seen, and the non-trivial distribution is driven by the change in strong phases across phase space}
+    \item{While the interpretation of $\gamma$ require charm inputs, the observed bin asymmetries are model independent}
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Interpretation of $\gamma$}
   \begin{center}
     \Large CP fit: Simultaneously fit bin yields and determine physics parameters, using model predictions of $c_i$ and $s_i$:
@@ -364,14 +385,37 @@
     r_B^{D\pi} &= 0.0041^{+0.0054}_{-0.0041},
   \end{align*}
   \begin{center}
-    \large However, the latest $\gamma$ and charm combination result is:
+    \tiny \href{https://arxiv.org/abs/2301.10328}{arXiv:2301.10328}\\~\\
+    \large However, the latest \href{https://cds.cern.ch/record/2838029}{$\gamma$ and charm combination} result is:
   \end{center}
   \begin{equation*}
     \gamma = (63.8^{+3.5}_{-3.7})^\circ
   \end{equation*}
   \begin{center}
-    \large What went wrong?!\\
-    Do we trust the model predicted $c_i$ and $s_i$, or their uncertainties?
+    \large Results are compatible at $3\sigma$, but could there be some other issue?
+  \end{center}  
+\end{frame}
+
+\begin{frame}{Interpretation of $\gamma$}
+  \begin{center}
+    \Large CP fit: Simultaneously fit bin yields and determine physics parameters, using model predictions of $c_i$ and $s_i$:
+  \end{center}
+  \begin{align*}
+    \gamma &= (116^{+12}_{-14})^\circ, \\
+    \delta_B^{DK} &= (81^{+14}_{-13})^\circ, \\
+    r_B^{DK} &= 0.110^{+0.020}_{-0.020}, \\
+    \delta_B^{D\pi} &= (298^{+62}_{-118})^\circ, \\
+    r_B^{D\pi} &= 0.0041^{+0.0054}_{-0.0041},
+  \end{align*}
+  \begin{center}
+    \tiny \href{https://arxiv.org/abs/2301.10328}{arXiv:2301.10328}\\~\\
+    \large However, the latest \href{https://cds.cern.ch/record/2838029}{$\gamma$ and charm combination} result is:
+  \end{center}
+  \begin{equation*}
+    \gamma = (63.8^{+3.5}_{-3.7})^\circ
+  \end{equation*}
+  \begin{center}
+    \large Do we trust the model predicted $c_i$ and $s_i$, or their uncertainties?
   \end{center}  
 \end{frame}
 
@@ -405,7 +449,8 @@
     \item{$e^+e^-$ collider at the $\psi(3770)\to D^0\bar{D^0}$ threshold}
     \begin{itemize}
       \item{2010-2011: $\SI{3}{\per\femto\barn}$}
-      \item{2022: $\SI{5}{\per\femto\barn}$}
+      \item{2021-2022: $\SI{5}{\per\femto\barn}$}
+      \item{2023-: $\SI{4}{\per\femto\barn}$}
       \item{Expect $\SI{20}{\per\femto\barn}$ in total by end of 2024}
     \end{itemize}
   \end{itemize}
@@ -475,7 +520,7 @@
   \end{equation*}
   \begin{figure}
     \includegraphics[width = 0.50\textwidth]{Plots/CPeven_fraction_combination_CPtags.png}
-    \caption*{\tiny Phys. Rev. D \textbf{107}, 032009}
+    \caption*{\tiny \href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.032009}{Phys. Rev. D \textbf{107}, 032009}}
   \end{figure}
   \vspace{-0.5cm}
   \begin{center}
@@ -485,7 +530,7 @@
 
 \begin{frame}{Strong phase analysis of $D^0\to K^+K^-\pi^+\pi^-$ at BESIII}
   \begin{center}
-    Our next task is to change the phase space inclusive analysis,
+    Our next task is to change the phase-space integrated analysis,
   \end{center}
   \vspace{-0.5cm}
   \begin{align*}
@@ -515,7 +560,7 @@
 
 \begin{frame}{Strong phase analysis of $D^0\to K^+K^-\pi^+\pi^-$ at BESIII}
   \begin{center}
-    Our next task is to change the phase space inclusive analysis,
+    Our next task is to change the phase-space integrated analysis,
   \end{center}
   \vspace{-0.5cm}
   \begin{align*}
@@ -556,7 +601,7 @@
       \begin{enumerate}
         \setcounter{enumi}{2}
         \setlength\itemsep{1.0em}
-        \item{However, amplitude model predictions of $\delta_D$ \underline{should not be trusted}}
+        \item{Model predictions of $\delta_D$ must \underline{not be trusted} for $\gamma$ extraction}
         \item{LHCb analysis has $3\sigma$ tension with world average}
       \end{enumerate}
     \end{column}
