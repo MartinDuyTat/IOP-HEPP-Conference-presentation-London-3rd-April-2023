@@ -96,12 +96,22 @@
     \setlength\itemsep{0.2em}
       \item{Negligible theoretical uncertainties: Ideal SM benchmark}
       \item{Accessible at tree level: Indirectly probe New Physics that enter loops}
-      \item{Compare with $\alpha$, $\beta$ measurements: Is the Unitary Triangle a triangle?}
+      \item{Compare with a global CKM fit: Is the Unitary Triangle a triangle?}
     \end{enumerate}
   \end{itemize}
   \vspace{-0.2cm}
   \begin{figure}
-    \includegraphics[width = 0.70\textwidth]{Plots/ckmfitter2.pdf}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[width = 1.0\textwidth]{Plots/ckmfitter_tree.png}
+      \caption{Tree level: $\gamma = \big(72.1^{+5.4}_{-5.7}\big)^\circ$}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[width = 1.0\textwidth]{Plots/ckmfitter_loop.png}
+      \caption{Loop level: $\gamma = \big(65.5^{+1.1}_{-2.7}\big)^\circ$}
+    \end{subfigure}
     \vspace{-0.3cm}
     \caption*{\tiny CKMfitter Group (J. Charles et al.), Eur. Phys. J. C41, 1-131 (2005)}
   \end{figure}
@@ -185,10 +195,6 @@
     $\mathcal{A}(B^-)=\mathcal{A}_B\Big(\mathcal{A}_{D^0} + r_Be^{i(\delta_B - \gamma)}\mathcal{A}_{\bar{D^0}}\Big)$ \\
     $\mathcal{A}(B^+)=\mathcal{A}_B\Big(\mathcal{A}_{\bar{D^0}} + r_Be^{i(\delta_B + \gamma)}\mathcal{A}_{D^0}\Big)$ \\
   \end{center}
-  \vspace{-0.3cm}
-  \begin{itemize}
-    \item{The magnitude of interference effects governed by $r_B\approx0.1$}
-  \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Sensitivity through interference}
@@ -199,7 +205,7 @@
     \setlength\itemsep{0.5em}
     \item{First, consider a phase-space integrated analysis}
     \item{Compare yields of $B^+$ and $B^-$ and determine the asymmetry}
-    \item{Interference effects are diluted by $\kappa$ when integrated over phase space}
+    \item{Interference effects are diluted by $c_1$ when integrated over phase space}
   \end{itemize}
   \begin{equation*}
     \begin{tikzcd}[column sep=huge]
@@ -210,7 +216,7 @@
   \end{equation*}
   \vspace{-0.7cm}
   \begin{equation*}
-    \lvert\mathcal{A}(B^-)\lvert^2\propto1 + r_B^2 + 2r_B\kappa\cos(\delta_B - \gamma)
+    \lvert\mathcal{A}(B^-)\lvert^2\propto1 + r_B^2 + 2r_Bc_1\cos(\delta_B - \gamma)
   \end{equation*}
 \end{frame}
 
@@ -225,7 +231,7 @@
     {\large Measuring the $B^\pm\to DK^\pm$ asymmetry $\mathcal{A}$ provide useful constraints on $\gamma$, but with some caveats:}
   \end{center}
   \begin{enumerate}
-    \item{Interference effects are diluted by a factor $\kappa = \SI{0.46(8)}{}$}
+    \item{Interference effects are diluted by a factor $c_1 = \SI{0.46(8)}{}$}
     \begin{itemize}
       \item{\href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.032009}{Phys. Rev. D \textbf{107}, 032009}}
     \end{itemize}
@@ -253,43 +259,108 @@
   \end{center}
   \begin{itemize}
     \setlength\itemsep{1.0em}
+    \item{Need external information about the $D^0$-$\bar{D^0}$ strong-phase difference $\delta_D$ across a 5-dimensional phase space to extract $\gamma$}
     \item{Model dependent measurement first proposed in 2007}
     \begin{itemize}
       \item{\href{https://www.sciencedirect.com/science/article/pii/S0370269307002262}{Phys. Lett. \textbf{B647} (2007) 400} by J. Rademacker and G. Wilkinson}
       \item{FOCUS amplitude model: $14^\circ$ precision with $1000$ candidates}
     \end{itemize}
-    \item{State of the art amplitude analysis by LHCb:}
+  \end{itemize}
+  \vspace{-0.35cm}
+  \begin{columns}[onlytextwidth]
+    \begin{column}{0.6\textwidth}
+      \centering
+      \begin{align*}
+        \mathcal{A}(\Phi) &= \sum a_iB_i(\Phi) \\
+        a_i &= \textrm{\footnotesize Complex coefficients} \\
+        B_i(\Phi) &= \textrm{\footnotesize Lineshapes (Breit-Wigner, etc)} \\
+      \end{align*}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \begin{figure}[H]
+        \centering
+        \begin{fmffile}{fgraph/fgraph_D2rhophi}
+          \setlength{\unitlength}{0.4cm}
+          \begin{fmfgraph*}(6,4)
+            \fmfstraight
+            \fmfleft{i1}
+            \fmfv{decor.shape=circle,decor.filled=shaded,decor.size=0.2w,label=$D^0$,label.angle=180,label.dist=0.5cm}{i1}
+            \fmfright{o1,o2,o3,o4}
+            \fmflabel{$\pi^+$}{o1}
+            \fmflabel{$\pi^-$}{o2}
+            \fmflabel{$K^+$}{o3}
+            \fmflabel{$K^-$}{o4}
+            \fmf{plain,tension=1.5}{i1,v1}
+            \fmfv{decor.shape=circle,decor.filled=shaded,decor.size=0.15w,label=\footnotesize$\phi(1020)$,label.angle=110,label.dist=1.1cm}{v1}
+            \fmf{plain}{v1,o1}
+            \fmf{plain}{v1,o2}
+            \fmf{plain,tension=1.5}{i1,v2}
+            \fmfv{decor.shape=circle,decor.filled=shaded,decor.size=0.15w,label=\footnotesize$\rho^0$,label.angle=-110,label.dist=1.0cm}{v2}
+            \fmf{plain}{v2,o3}
+            \fmf{plain}{v2,o4}
+          \end{fmfgraph*}
+        \end{fmffile}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Phase-space binned analysis of $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
+  \begin{itemize}
+    \setlength\itemsep{0.5em}
+    \item{It is better to measure $\delta_D$ directly at a charm factory, such as BESIII}
+  \end{itemize}
+  \vspace{0.1cm}
+  \centering
+  \begin{minipage}{0.7\textwidth}
+    \begin{block}{\centering Amplitude-average cosine of $\delta_D$ in bin $i$}
+      \begin{equation*}
+        c_i = \frac{\int_i\dd{\Phi}|\mathcal{A}(D^0)||\mathcal{A}(\bar{D^0})|\cos(\delta_D)}{\sqrt{\int_i\dd{\Phi}\abs{\mathcal{A}(D^0)}^2\int_i\dd{\Phi}\abs{\mathcal{A}(D^0)}^2}}
+      \end{equation*}
+    \end{block}
+  \end{minipage}
+  \vspace{0.5cm}
+  \begin{itemize}
+    \setlength\itemsep{1.0em}
+    \item{State of the art amplitude analysis by LHCb: \href{https://link.springer.com/article/10.1007/jhep02(2019)126}{JHEP \textbf{02} (2019) 126}}
     \begin{itemize}
-      \item{\href{https://link.springer.com/article/10.1007/jhep02(2019)126}{JHEP \textbf{02} (2019) 126}}
-      \item{Exploits the huge dataset of charm decays collected by LHCb}
-      \item{Useful for understanding the 5-dimensional phase space}
-    \end{itemize}
-    \item{Use LHCb model to identify regions with expected large asymmetries}
-    \begin{itemize}
+      \setlength\itemsep{0.5em}
+      \item{Identify regions with expected large asymmetries}
       \item{Place regions with similar asymmetries together in bins}
+      \item{Final measurement will be \underline{model independent}}
     \end{itemize}
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Phase-space binned analysis of $B^\pm\to[K^+K^-\pi^+\pi^-]_DK^\pm$}
   \begin{itemize}
-    \setlength\itemsep{1.0em}
+    \setlength\itemsep{0.5em}
     \item{Analogous to the decays $D^0\to K_S^0\pi^+\pi^-$ and $K_S^0K^+K^-$, where the binning scheme may be visualised on a Dalitz plot}
+    \item{Single most precise measurement: $\gamma = \big(68.7^{+5.2}_{-5.1}\big)^\circ$}
+    \begin{itemize}
+      \item{\href{https://link.springer.com/article/10.1007/JHEP02(2021)169}{JHEP \textbf{02} (2021) 0169}}
+    \end{itemize}
   \end{itemize}
   \begin{figure}
     \begin{subfigure}{0.45\textwidth}
-      \includegraphics[height = 4cm]{Plots/KsPiPi_optimal.png}
+      \includegraphics[height = 4.0cm]{Plots/KsPiPi_optimal.png}
+      \vspace{-0.3cm}
       \caption*{$K_S^0\pi^+\pi^-$}
     \end{subfigure}%
     \begin{subfigure}{0.45\textwidth}
-      \includegraphics[height = 4cm]{Plots/KsKK_binning.png}
+      \includegraphics[height = 4.0cm]{Plots/KsKK_binning.png}
+      \vspace{-0.3cm}
       \caption*{$K_S^0K^+K^-$}
     \end{subfigure}
   \end{figure}
+  \vspace{-0.3cm}
   \begin{itemize}
-    \setlength\itemsep{0.5em}
-    \item{The strong phase $\delta_D$ varies across phase space, leading to different asymmetries in each bin}
-    \item{The amplitude-averaged cosine and sine of $\delta_D$, $c_i$ and $s_i$, are measured directly in bin $i$ at charm factories, such as BESIII}
+    \setlength\itemsep{1.0em}
+    \item{Measurements of $c_i$ and $s_i$ were performed at:}
+    \begin{itemize}
+      \item{CLEO: \href{https://doi.org/10.1103/PhysRevD.82.112006}{Phys. Rev. \textbf{D82} (2010) 112006}}
+      \item{BESIII: \href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.101.112002}{Phys. Rev. \textbf{D101} (2020) 112002}}
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -377,13 +448,9 @@
   \begin{center}
     \Large CP fit: Simultaneously fit bin yields and determine physics parameters, using model predictions of $c_i$ and $s_i$:
   \end{center}
-  \begin{align*}
-    \gamma &= (116^{+12}_{-14})^\circ, \\
-    \delta_B^{DK} &= (81^{+14}_{-13})^\circ, \\
-    r_B^{DK} &= 0.110^{+0.020}_{-0.020}, \\
-    \delta_B^{D\pi} &= (298^{+62}_{-118})^\circ, \\
-    r_B^{D\pi} &= 0.0041^{+0.0054}_{-0.0041},
-  \end{align*}
+  \begin{equation*}
+    \gamma = (116^{+12}_{-14})^\circ
+  \end{equation*}
   \begin{center}
     \tiny \href{https://arxiv.org/abs/2301.10328}{arXiv:2301.10328}\\~\\
     \large However, the latest \href{https://cds.cern.ch/record/2838029}{$\gamma$ and charm combination} result is:
@@ -400,13 +467,9 @@
   \begin{center}
     \Large CP fit: Simultaneously fit bin yields and determine physics parameters, using model predictions of $c_i$ and $s_i$:
   \end{center}
-  \begin{align*}
-    \gamma &= (116^{+12}_{-14})^\circ, \\
-    \delta_B^{DK} &= (81^{+14}_{-13})^\circ, \\
-    r_B^{DK} &= 0.110^{+0.020}_{-0.020}, \\
-    \delta_B^{D\pi} &= (298^{+62}_{-118})^\circ, \\
-    r_B^{D\pi} &= 0.0041^{+0.0054}_{-0.0041},
-  \end{align*}
+  \begin{equation*}
+    \gamma = (116^{+12}_{-14})^\circ
+  \end{equation*}
   \begin{center}
     \tiny \href{https://arxiv.org/abs/2301.10328}{arXiv:2301.10328}\\~\\
     \large However, the latest \href{https://cds.cern.ch/record/2838029}{$\gamma$ and charm combination} result is:
@@ -450,7 +513,7 @@
     \begin{itemize}
       \item{2010-2011: $\SI{3}{\per\femto\barn}$}
       \item{2021-2022: $\SI{5}{\per\femto\barn}$}
-      \item{2023-: $\SI{4}{\per\femto\barn}$}
+      \item{2023-: $\SI{5}{\per\femto\barn}$}
       \item{Expect $\SI{20}{\per\femto\barn}$ in total by end of 2024}
     \end{itemize}
   \end{itemize}
